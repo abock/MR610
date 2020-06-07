@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.css">
+  <title>MR610 Cable Label Generator</title>
+</head>
+<body>
+  <div class="layout">
+    <div id="data-entry">
+      <p>Enter text for labels, one label per line.</p>
+      <div>
+        <textarea id="label-data"></textarea>
+      </div>
+      <div>
+        <label for="font-size">Font Size:</label> <input type="range" min="5" max="20" id="font-size">
+      </div>
+      <div>
+        <input type="checkbox" id="label-toggle-bold"> <label for="label-toggle-bold">Bold</label>
+      </div>
+      <div>
+        <input type="checkbox" id="label-toggle-barcodes"> <label for="label-toggle-barcodes">Data Matrix Barcode</label>
+      </div>
+      <div>
+        <input type="checkbox" id="label-toggle-borders"> <label for="label-toggle-borders">Borders</label>
+      </div>
+      <div>
+        <input type="checkbox" id="label-toggle-overflow"> <label for="label-toggle-overflow">Overflow</label>
+      </div>
+      <div>
+        <label for="sheet-zoom">Zoom:</label> <input type="range" min="1" max="100" id="sheet-zoom">
+      </div>
+      <div>
+        <button onclick="resetLabelSettings()">Reset</button>
+      </div>
+    </div>
+    <div id="sheet">
+    </div>
+  </div>
+  <script src="datamatrix.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
