@@ -9,7 +9,6 @@ body {
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #e9f0f8;
 }
 
 .layout {
@@ -90,14 +89,8 @@ body {
 }
 
 textarea {
-  border: 1px solid #ddd;
   resize: none;
-  height: 30em;
-}
-
-textarea:focus {
-  outline: none;
-  border: 1px solid blue;
+  height: 20em;
 }
 
 @media print {
@@ -123,6 +116,7 @@ textarea:focus {
 
   .sheet {
     border: none !important;
+    box-shadow: none !important;
     zoom: 100% !important;
   }
 

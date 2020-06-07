@@ -7,33 +7,44 @@
   <title>MR610 Cable Label Generator</title>
 </head>
 <body>
+  <header>
+    <h1>MR610 Cable Label Generator</h1>
+  </header>
   <div class="layout">
     <div id="data-entry">
-      <p>Enter text for labels, one label per line.</p>
-      <div>
-        <textarea id="label-data"></textarea>
-      </div>
-      <div>
-        <label for="font-size">Font Size:</label> <input type="range" min="5" max="20" id="font-size">
-      </div>
-      <div>
-        <input type="checkbox" id="label-toggle-bold"> <label for="label-toggle-bold">Bold</label>
-      </div>
-      <div>
-        <input type="checkbox" id="label-toggle-barcodes"> <label for="label-toggle-barcodes">Data Matrix Barcode</label>
-      </div>
-      <div>
-        <input type="checkbox" id="label-toggle-borders"> <label for="label-toggle-borders">Borders</label>
-      </div>
-      <div>
-        <input type="checkbox" id="label-toggle-overflow"> <label for="label-toggle-overflow">Overflow</label>
-      </div>
-      <div>
-        <label for="sheet-zoom">Zoom:</label> <input type="range" min="1" max="100" id="sheet-zoom">
-      </div>
-      <div>
-        <button onclick="resetLabelSettings()">Reset</button>
-      </div>
+      <form action="#">
+        <p>Enter text for labels, one label per line.</p>
+        <div>
+          <textarea id="label-data"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="font-size">Font Size</label>
+          <input type="range" class="form-control-range" min="5" max="20" id="font-size">
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="label-toggle-bold">
+          <label for="label-toggle-bold">Bold</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="label-toggle-barcodes">
+          <label for="label-toggle-barcodes">Data Matrix Barcode</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="label-toggle-borders">
+          <label for="label-toggle-borders">Borders</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="label-toggle-overflow">
+          <label for="label-toggle-overflow">Overflow</label>
+        </div>
+        <div class="form-group">
+          <label for="sheet-zoom">Zoom</label>
+          <input type="range" class="form-control-range" min="1" max="100" id="sheet-zoom">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-warning" onclick="resetLabelSettings()">Reset</button>
+        </div>
+      </form>
     </div>
     <div id="sheet">
     </div>
